@@ -6,6 +6,19 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <button ion-button>search</button>
+<ion-content>
+  <div class="flexDiv">
+    <ion-item>
+      <ion-label color="primary">关键字：</ion-label>
+      <ion-input placeholder="Text Input"></ion-input>
+    </ion-item>
+    <button ion-button>Search</button>
+  </div>
+  <div class="contentDiv">
+    <!--<ion-list>-->
+      <!--<ion-item *ngFor="let article of articles" (click)="viewArticle(article)">-->
+        <!--{{article.title}}-->
+      <!--</ion-item>-->
+    <!--</ion-list>-->
+  </div>
 </ion-content>

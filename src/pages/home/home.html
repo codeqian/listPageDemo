@@ -6,6 +6,15 @@
   </ion-navbar>
 </ion-header>
 
+<!--添加padding标记会有默认的padding-->
 <ion-content padding>
-  <button ion-button (click)="pushPage()">Button</button>
+  <div class="flexDiv">
+    <!--使用ionic默认图标，图标列表：https://ionicframework.com/docs/ionicons/-->
+    <!--<ion-icon name="ionic" class="logo"></ion-icon>-->
+    <ion-img src="../../assets/imgs/th.jpg" class="logo"></ion-img>
+  </div>
+  <div class="textCenter">This is a ionic demo</div>
+  <div class="flexDiv">
+    <button ion-button (click)="pushPage()" class="mainButton">Enter</button>
+  </div>
 </ion-content>

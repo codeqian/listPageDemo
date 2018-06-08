@@ -1,3 +1,22 @@
 page-home {
-
+}
+.flexDiv{
+  display: flex;
+}
+.logo{
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  height: 300px;
+}
+.mainButton{
+  horiz-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.textCenter{
+  color: #488aff;
+  text-align: center;
+  margin: 10px;
 }
