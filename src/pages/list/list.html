@@ -10,9 +10,9 @@
   <div class="flexDiv">
     <ion-item>
       <ion-label color="primary">关键字：</ion-label>
-      <ion-input placeholder="Text Input"></ion-input>
+      <ion-input placeholder="Text Input" [(ngModel)]="keyWords"></ion-input>
     </ion-item>
-    <button ion-button>Search</button>
+    <button ion-button (click)="goSearch()">Search</button>
   </div>
   <div class="contentDiv">
     <!--<ion-list>-->
