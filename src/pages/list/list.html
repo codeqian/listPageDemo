@@ -15,10 +15,13 @@
     <button ion-button (click)="goSearch()">Search</button>
   </div>
   <div class="contentDiv">
-    <!--<ion-list>-->
-      <!--<ion-item *ngFor="let article of articles" (click)="viewArticle(article)">-->
-        <!--{{article.title}}-->
-      <!--</ion-item>-->
-    <!--</ion-list>-->
+    <ion-list inset>
+      <ion-item *ngFor="let item of listInfo" (click)="openPlayer(item?.id)">
+        <ion-thumbnail>
+          <img src="{{item?.imageUrl}}" class="previewImage">
+        </ion-thumbnail>
+        <h2>{{item?.title}}</h2>
+      </ion-item>
+    </ion-list>
   </div>
 </ion-content>

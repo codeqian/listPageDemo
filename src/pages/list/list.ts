@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {NavController} from "ionic-angular";
 import {HttpClient} from "@angular/common/http";
+import {PlayerPage} from "../player/player";
 
 @Component({
   templateUrl: 'list.html'
@@ -8,10 +9,13 @@ import {HttpClient} from "@angular/common/http";
 export class ListPage {
   keyWords:string;
   path:string;
+  listInfo=[];
 
   constructor(public navCtrl: NavController,private http: HttpClient) {
     console.log('List Page Constructor initialization!');
+    this.goSearch();
   }
+
   goSearch(){
     console.log('key words:'+this.keyWords);
     if(this.keyWords==undefined){
@@ -20,10 +24,19 @@ export class ListPage {
       this.path="http://open.abc.com/search/video/by_keywords?category=1362&keywords="+this.keyWords+"&size=20&page=1";
     }
     this.http.get(this.path).subscribe(data => {
-      console.log(data);
-      this.showList(data);
+      let listData:any=data;
+      this.listInfo=listData.body.resources;
+      // console.log("listData------->",data);
+      // console.log("listData------->",this.listInfo[0].imageUrl);
+    }, error => {
+      console.log(error);
     });
   }
-  showList(data:any){
+
+  openPlayer(vid:String){
+    console.log("open video:",vid);
+    this.navCtrl.push(PlayerPage, {
+      id: vid
+    });
   }
 }

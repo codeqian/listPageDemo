@@ -8,12 +8,16 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import {ListPage} from "../pages/list/list";
 import {HttpClientModule} from "@angular/common/http";
+import {videoPreview} from "../components/videoPreview";
+import {PlayerPage} from "../pages/player/player";
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     ListPage,
+    PlayerPage,
+    videoPreview,
   ],
   imports: [
     BrowserModule,
@@ -24,7 +28,9 @@ import {HttpClientModule} from "@angular/common/http";
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    PlayerPage,
+    videoPreview,
   ],
   providers: [
     StatusBar,
