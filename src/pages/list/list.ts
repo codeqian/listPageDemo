@@ -27,16 +27,16 @@ export class ListPage {
       let listData:any=data;
       this.listInfo=listData.body.resources;
       // console.log("listData------->",data);
-      // console.log("listData------->",this.listInfo[0].imageUrl);
     }, error => {
       console.log(error);
     });
   }
 
-  openPlayer(vid:String){
+  openPlayer(vName:string,vid:String){
     console.log("open video:",vid);
     this.navCtrl.push(PlayerPage, {
-      id: vid
+      id: vid,
+      name:vName
     });
   }
 }

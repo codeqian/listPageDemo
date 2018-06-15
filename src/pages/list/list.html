@@ -16,7 +16,7 @@
   </div>
   <div class="contentDiv">
     <ion-list inset>
-      <ion-item *ngFor="let item of listInfo" (click)="openPlayer(item?.id)">
+      <ion-item *ngFor="let item of listInfo" (click)="openPlayer(item?.title,item?.id)">
         <ion-thumbnail>
           <img src="{{item?.imageUrl}}" class="previewImage">
         </ion-thumbnail>

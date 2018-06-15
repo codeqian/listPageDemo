@@ -1,12 +1,13 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Player Page
+      {{title}}
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <div class="contentDiv">test
+  <div class="contentDiv">
+    <video :src="https://media.w3.org/2010/05/sintel/trailer.mp4" autoplay="autoplay" controls></video>
   </div>
 </ion-content>
